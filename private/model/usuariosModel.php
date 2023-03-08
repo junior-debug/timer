@@ -461,10 +461,10 @@ class database{
       $respuesta = false;
     }
     return $respuesta;
-  }
-
+  } 
+  // SELECT * FROM datos_empleados WHERE servicio = '".$nameService."' AND cargo = 'SUPERVISOR' AND estatus=1
   public function selectSuperv($nameService){
-    $sql = $this->db->query("SELECT * FROM datos_empleados WHERE servicio = '".$nameService."' AND cargo = 'SUPERVISOR' AND estatus=1");
+    $sql = $this->db->query("SELECT * FROM datos_empleados WHERE cargo = 'SUPERVISOR' AND estatus=1 AND servicio LIKE '%".$nameService."%';");
     if($this->db->rows($sql) > 0 ){
       while($data = $this->db->recorrer($sql)){
         $respuesta[] = $data;
@@ -483,5 +483,3 @@ class database{
 
 
 }
-
-?>
