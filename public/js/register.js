@@ -322,7 +322,6 @@ $(document).ready(function () {
                 }
               }
             } else {
-              alert("Vergacion sí, no supervisa ningun servicio, que de pinga");
               return false;
             }
           }
