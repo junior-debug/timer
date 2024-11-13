@@ -322,6 +322,7 @@ $(document).ready(function () {
                 }
               }
             } else {
+              alert("Seleccione Servicios");
               return false;
             }
           }
